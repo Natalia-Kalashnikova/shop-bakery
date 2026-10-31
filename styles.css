@@ -44,7 +44,9 @@
 }
 
 /* Base */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -70,6 +72,10 @@ p {
   margin-top: 0;
 }
 
+a {
+  display: inline-block;
+}
+
 address {
   font-style: normal;
 }
@@ -84,7 +90,6 @@ ul {
   width: 100%;
   max-width: 1288px;
   margin: 0 auto;
-  padding: 24px;
 }
 
 .visually-hidden {
@@ -139,10 +144,12 @@ ul {
 .header {
   background-color: #a18268; /*remove*/
 }
+
 .header-container {
   display: flex;
   align-items: center;
   gap: 40px;
+  padding: 24px 0;
 }
 
 .header-nav {
@@ -246,13 +253,6 @@ ul {
 }
 
 /* Chefs section */
-.chef-photo {
-  border-radius: 4px 4px 4px 200px;
-  box-shadow:
-    -16px 16px 0 0 var(--color-primary-light),
-    -16px 16px 0 2px var(--color-primary-copyright);
-}
-
 .chefs-title {
   max-width: 538px;
   margin: 0 auto 80px;
@@ -267,16 +267,52 @@ ul {
   content: '';
 }
 
-.chefs-subtitle {
+.chef-list {
+  display: flex;
+  gap: 40px 30px;
+  flex-wrap: wrap;
+}
+
+.chef-item {
+  flex-basis: calc(100% - 30px / 2);
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
+.chef-photo {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow:
+    -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-primary-copyright);
+}
+
+.chef-title {
   margin-bottom: 16px;
 
   font-size: 40px;
   font-weight: 600;
 }
 
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* Formats section */
 .formats-title {
   margin-bottom: 80px;
+}
+
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
 }
 
 .format-title {
@@ -292,6 +328,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 
   width: 44px;
   height: 44px;
@@ -341,16 +378,55 @@ ul {
   line-height: 1.6;
 }
 /* Contacts section */
+.contacts-section {
+  padding-bottom: 96px;
+}
+
+.contacts-container {
+  display: flex;
+  gap: 32px;
+}
 .contacts-title {
   margin-bottom: 16px;
 }
 
+.contacts-map {
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 16px;
+}
+
 /* Footer */
 footer {
+  padding: 32px 0;
+
   background-color: var(--color-primary-dark);
   background-image: url('./images/footer-background.png');
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.address-list,
+.address-info {
+  flex-grow: 1;
 }
 
 .address-link {
