@@ -1,14 +1,12 @@
 .link {
     color: var(--color-primary-light);
-
     text-decoration: none;
-
     transition: color 0.3s;
-}
 
-.link:hover,
-.link:focus,
-.link:active {
-    color: var(--color-brand-normal);
-    /* font-weight: 600; discuss with the designer*/
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--color-brand-normal);
+        /* font-weight: 600; discuss with the designer*/
+    }
 }

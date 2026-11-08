@@ -8,19 +8,19 @@
     font-weight: 600;
 
     cursor: pointer;
-}
 
-.button:hover,
-.button:focus {
-    background-color: transparent;
-    border: 2px solid var(--color-brand-normal);
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        border: 2px solid var(--color-brand-normal);
 
-    color: var(--color-brand-dark);
-}
+        color: var(--color-brand-dark);
+    }
 
-.button:disabled {
-    color: gray;
-    background: lightgray;
-    border-color: inherit;
-    cursor: not-allowed;
+    &:disabled {
+        color: gray;
+        background: lightgray;
+        border-color: inherit;
+        cursor: not-allowed;
+    }
 }

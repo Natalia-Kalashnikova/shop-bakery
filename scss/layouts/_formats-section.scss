@@ -1,19 +1,20 @@
-.formats-title {
-    margin-bottom: 80px;
-}
+.formats-section{
+    .formats-container {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
 
-.formats-container {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-}
+    .formats-title {
+        margin-bottom: 80px;
+    }
 
-/* Carousel */
-.formats-list {
-    display: flex;
-    gap: 20px;
-}
+    .formats-list {
+        display: flex;
+        gap: 20px;
+    }
 
-.format-item {
-    flex-basis: calc(100% - 40px / 3);
+    .format-item {
+        flex-basis: calc(100% - 40px / 3);
+    }
 }
