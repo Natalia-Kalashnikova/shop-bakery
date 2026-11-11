@@ -14,8 +14,14 @@
         margin-bottom: 0;
 
         color: var(--color-primary-light);
-        font-size: 128px;
+        font-size: 67px;
+        line-height: 1;
         font-weight: 900;
         text-align: center;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 128px;
+            left: 1.5;
+        }
     }
 }
