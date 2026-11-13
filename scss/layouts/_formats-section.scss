@@ -1,20 +1,32 @@
-.formats-section{
-    .formats-container {
-        display: flex;
-        gap: 32px;
-        align-items: center;
-    }
+.formats-section {
+  .formats-section-slider {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
 
-    .formats-title {
-        margin-bottom: 80px;
-    }
+  .formats-section-container {
+    overflow: hidden;
+    padding: 20px;
+  }
 
-    .formats-list {
-        display: flex;
-        gap: 20px;
-    }
+  .formats-title {
+    margin-bottom: 80px;
+  }
 
-    .format-item {
-        flex-basis: calc(100% - 40px / 3);
+  .formats-list {
+    margin-bottom: 32px;
+  }
+
+  .button {
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
     }
+  }
+
+  // .format-item {
+  //     flex-basis: calc(100% - 40px / 3);
+  // }
 }
