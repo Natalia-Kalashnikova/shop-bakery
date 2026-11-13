@@ -82,11 +82,22 @@
           </button>
           <div class="mobile-menu">
             <button
-              class="menu-btn-close"
+              class="mobil-btn-close menu-btn-close"
               type="button"
             >
-              Close
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
             </button>
+            <a class="mobile-menu-logo" href="/">
+              <img src="./images/logo-dark.svg" alt="Логотип сучасної пекарні">
+            </a>
+            <ul class="mobile-menu-list">
+              <li><a class="mobile-menu-link" href="#traditions-section">Наші традиції</a></li>
+              <li><a class="mobile-menu-link" href="#chefs-section">Шеф-кухарі</a></li>
+              <li><a class="mobile-menu-link" href="#formats-section">Формати</a></li>
+              <li><a class="mobile-menu-link" href="#contact-section">Контакти</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -333,6 +344,7 @@
                     placeholder="Ім’я"
                     minlength="2"
                     maxlength="20"
+                    required
                   />
                 </div>
                 <div class="form-field input">
@@ -344,6 +356,7 @@
                     id="user-tel"
                     placeholder="Телефон"
                     pattern="^\+[0-9]{12}"
+                    required
                   />
                 </div>
                 <div class="form-field input">
@@ -354,6 +367,7 @@
                     name="user-email"
                     id="user-email"
                     placeholder="Електронна пошта"
+                    required
                   />
                 </div>
                 <button class="form-button button" type="submit">Замовити дзвінок</button>
@@ -372,7 +386,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer-container">
           <nav class="footer-nav">
@@ -391,37 +405,37 @@
             </ul>
           </nav>
           <address class="footer-address">
-            <ul class="address-list">
-              <li>
-                <a class="address-link" href="tel:+380960000007">+ 38 (096) 000 00 07
-                </a>
-              </li>
-              <li>
-                <a class="address-link" href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a>
-              </li>
-              <li>
-                <a
-                  class="address-link"
-                  href="https://maps.app.goo.gl/WbgKwgsAYmHuz2JVA"
-                  target="_blank"
-                  >Україна, м. Київ, вул. Січових Стрільців 54</a
-                >
-              </li>
-              <li>
+            <div class="footer-contacts">
+              <ul class="address-list">
+                <li>
+                  <a class="address-link" href="tel:+380960000007">+ 38 (096) 000 00 07
+                  </a>
+                </li>
+                <li>
+                  <a class="address-link" href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a>
+                </li>
+                <li>
+                  <a
+                    class="address-link"
+                    href="https://maps.app.goo.gl/WbgKwgsAYmHuz2JVA"
+                    target="_blank"
+                    >Україна, м. Київ, вул. Січових Стрільців 54</a
+                  >
+                </li>
+              </ul>
+              <div class="footer-socials">
                 <a class="address-link" href="#">
-                  <svg class="address-icon" width="32" height="32">
+                  <svg class="socials-icon" width="32" height="32">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
-              </li>
-              <li>
                 <a class="address-link" href="#">
-                   <svg class="address-icon" width="32" height="32">
+                    <svg class="socials-icon" width="32" height="32">
                     <use href="./images/icons.svg#icon-instagram"></use>
-                   </svg>
+                    </svg>
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
             <div class="address-info">
               <a class="address-link" href="#" target="_blank">Політика конфіденційності</a>
               <p class="address-copyright">&copy;2026 Дані захищені</p>
@@ -429,21 +443,23 @@
           </address>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <div class="backdrop is-hidden">
       <div class="modal">
         <button
           class="modal-btn-close"
           type="button"
         >
-          Close
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
         </button>
         <form
           name="modal-form"
           autocomplete="off"
         >
-          <h2>Замовити дзвінок</h2>
-          <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+          <h2 class="modal-title">Замовити дзвінок</h2>
+          <p class="modal-text">Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
           <div class="form-field input">
             <label
               class="form-label visually-hidden"
